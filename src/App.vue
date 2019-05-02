@@ -1,28 +1,29 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="html">
+ <div id="main">
+   <NavBar/>
+   <Header text="Brewdog Beers"/>
+   <router-view id="view"/>
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from '@/components/NavBar';
+import Header from '@/components/Header';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  components: { NavBar, Header}
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="css" scoped>
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
+#view {
+    font-family: 'Gugi', cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+    background: url('../public/img/wp3087148.jpg') no-repeat center center fixed;
+    }
 </style>
